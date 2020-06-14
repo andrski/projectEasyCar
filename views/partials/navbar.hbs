@@ -1,0 +1,20 @@
+<nav class="blue darken-4">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Todos</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            {{#if isIndex}}
+            <li class="active"><a href="/">View Cars</a></li>
+            {{else}}
+            <li><a href="/">View Cars</a></li>
+            {{/if}} <!--operator if from HBS -->>
+
+            {{#if isCreate}}
+            <li class="active"><a href="/create">Creat a Car</a></li>
+            {{else}}
+            <li><a href="/create">Create a Car</a></li>
+            {{/if}} <!--operator if from HBS -->>
+            
+        </ul>
+    </div>
+</nav>

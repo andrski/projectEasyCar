@@ -1,0 +1,31 @@
+<h2>View car list</h2>
+{{#if cars.length}}
+<ul>
+{{#each cars}}
+    
+    <li class="todo">
+        <form action="/completed" method="post">
+            <label>
+                {{#if tuning}}
+                <input type="checkbox" checked name="completed" />
+                <span class="completed">{{car}}</span>
+                <span class="completed">{{power}}</span>
+
+                {{else}}
+                <input type="checkbox" name="completed" />
+                <span>{{car}}</span>
+                <span >{{power}}</span>
+
+                {{/if}}
+
+                <input type="hidden" value="{{_id}}" name="id" />
+
+                <button class="btn btn-small" type="submit">SAVE</button>
+            </label>
+        </form>
+</li>
+{{/each}}
+</ul>
+{{else}}
+<p>No todos(array from DB)</p>
+{{/if}}
